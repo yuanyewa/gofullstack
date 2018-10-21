@@ -5,6 +5,8 @@ package greetingspackage
 
 import "fmt"
 
+var MyVar float32
+
 // We indicate to Go that we want to export a function by upper casing the function's
 // first letter.
 func PrintGreetings() {

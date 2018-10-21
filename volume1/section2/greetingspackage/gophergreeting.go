@@ -16,7 +16,8 @@ func GopherGreetings() {
 
 // Example of a Packages init() function
 func init() {
-
+	fmt.Println("I'm called")
+	MyVar = 3.14
 	MagicNumber = 108
 
 }
