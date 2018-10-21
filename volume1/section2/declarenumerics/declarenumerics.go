@@ -21,6 +21,15 @@ func main() {
 	x, y, z := 0, 1, 2
 	fmt.Printf("x: %d\ty: %d\tz: %d\n", x, y, z)
 
+	{
+		x, y, z := 0, 1.2, " astring"
+		fmt.Println("sfsfsfsfsf", x, y, z)
+	}
+
+	const xx = 3
+	const yy float32 = 4.5
+	fmt.Println(xx, yy)
+
 	// Example of a complex number
 	myComplexNumber := 5 + 24i
 	fmt.Println("Value of myComplexNumber: ", myComplexNumber)
@@ -40,4 +49,11 @@ func main() {
 	)
 	fmt.Printf("a: %v\tb: %v\tc: %v\n", a, b, c)
 
+	{
+		var (
+			a         = 3
+			b float32 = 4
+		)
+		fmt.Println(a, b)
+	}
 }
