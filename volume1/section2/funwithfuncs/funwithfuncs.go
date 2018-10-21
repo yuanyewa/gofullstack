@@ -1,12 +1,12 @@
 // Various examples of functions in Go.
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // An example of a function that takes one input parameter, but does not return
 // anything back. Thus, it is considered a void function.
-
-var y = 4
 
 func oddOrEven(x int) {
 
@@ -25,7 +25,20 @@ func oddOrEven(x int) {
 	} else {
 		fmt.Println("The number,", y, ",is odd.")
 	}
+}
 
+var y = 4
+
+// named return parameters are already defined at top level. Can use directly
+// function with variable number of input
+func myfunc(xx ...interface{}) (x, y int) {
+	oddOrEven(5)
+	x = 4
+	y = 5
+	for _, v := range xx { // range function to loop over
+		fmt.Println(v)
+	}
+	return //naked return; only use for short functions
 }
 
 // An example of a function that takes 2 input parameters and returns an output
@@ -53,6 +66,8 @@ func multiSum(args ...int) int {
 
 // main() is a niladic function because it doesn't accept any arguments
 func main() {
+	xx, _ := myfunc([]interface{}{10, "a"}...)
+	fmt.Println(xx)
 	var numberToCheck = 7
 	oddOrEven(numberToCheck)
 
