@@ -8,8 +8,10 @@ import (
 
 func main() {
 
-	var gopherName string
+	var gopherName, myFlag string
+	//flag.StringVar syntax: address, flag, default, help msg
 	flag.StringVar(&gopherName, "gophername", "Gopher", "The name of the Gopher")
+	flag.StringVar(&myFlag, "myflag", "a flag", "enter your flag name")
 	flag.Parse()
-	fmt.Println("Hello " + gopherName + "!")
+	fmt.Println("Hello " + gopherName + myFlag + "!")
 }
