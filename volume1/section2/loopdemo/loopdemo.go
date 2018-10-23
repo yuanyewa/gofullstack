@@ -20,6 +20,14 @@ func main() {
 	}
 	fmt.Println("\n\n")
 
+	k := 0
+	for ; ; k++ {
+		fmt.Println(k)
+		if k == 10 {
+			break
+		}
+	}
+
 	// Single condition for loop
 	j := -20
 	for j != 0 {
@@ -33,7 +41,6 @@ func main() {
 	for {
 
 		fmt.Println("Inside the infinite loop!")
-
 		<-loopTimer.C
 		break
 
