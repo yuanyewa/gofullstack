@@ -22,5 +22,22 @@ func main() {
 		fmt.Println("z does not equal 1, 2, or 3")
 
 	}
-
+	var (
+		x int
+		y string
+	)
+	switch interface{} (x).(type) {
+	case int:
+		fmt.Println("I'm int")
+	default:
+		fmt.Println("I'm not int")
+	}
+	switch interface{} (y).(type) {
+	case int:
+		fmt.Println("I'm int")
+	case string:
+		fmt.Println("I'm string")
+	default:
+		fmt.Println("I'm not int")
+	}
 }
