@@ -5,13 +5,18 @@ import (
 	"fmt"
 )
 
+type Light int
 const (
-	_ = iota
+	_ Light = iota
 	TrafficLightStateRedLight
 	TrafficLightStateGreenLight
 	TrafficLightStateYellowLight
 )
 
+func (l Light) String() string {
+	strings := []string {"Red", "Green", "Yellow"}
+	return strings[l-1]
+}
 func main() {
 
 	fmt.Println("Red Light State Code: ", TrafficLightStateRedLight)
