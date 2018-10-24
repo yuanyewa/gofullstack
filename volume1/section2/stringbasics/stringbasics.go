@@ -19,4 +19,6 @@ func main() {
 	fmt.Println("Hello " + subject + "!")
 	fmt.Println(len("this is me"))
 	fmt.Printf("sdfsf%v%v\n",3.13, myT(3))
+	x := fmt.Sprintf("sdfsfsfsf%v\n", "!!!!!!!!!!!!!!!")
+	fmt.Printf(x)
 }
