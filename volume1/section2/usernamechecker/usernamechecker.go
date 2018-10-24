@@ -8,7 +8,7 @@ import (
 	"regexp"
 )
 
-const UsernameRegex string = `^@?(\w){1,15}$`
+const UsernameRegex string = `^@?(\w){1,15}\s$`
 
 func main() {
 
