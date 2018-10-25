@@ -89,5 +89,15 @@ func main() {
 	beatlesArrayExample()
 
 	u2ArrayExample()
+	var mystring = [5]string{"a", "b"}
+	func(input [5]string) {
+		input[0] = "x"
+		fmt.Println(input)
+	}(mystring)
+	fmt.Println("array pass by value, mystring = ", mystring)
 
+	// myslice := make([]string, 5)
+	myslice := mystring[:] // myslice points to mystring
+	myslice[0] = "changed"
+	fmt.Println("slice pass by value, mystring = ", mystring)
 }
