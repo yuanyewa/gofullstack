@@ -36,7 +36,13 @@ func printNationCapitalsMap(capitalsMap map[string]string) {
 }
 
 func nationCapitalsExample() {
+	myMap := make(map[int]string)
+	myMap[0] = "Monday"
+	myMap[1] = "Tuesday"
+	fmt.Println(myMap)
 
+	map2 := map[int]string{0: "Jan", 1: "Feb"}
+	fmt.Println(map2)
 	// Note: In Go, maps have no contract to maintain the order of the keys
 	var nationCapitals map[string]string = make(map[string]string)
 	nationCapitals["Afghanistan"] = "Kabul"
