@@ -7,6 +7,9 @@ import (
 
 func main() {
 	myMat := [3][]int{{1, 2}, {3, 4, 5}}
+	myMap2 := make([][]int, 3, 4)
+	// myMap2[0] = []int{1, 2}
+	fmt.Println("capacity & len is: ", cap(myMap2), len(myMap2))
 	fmt.Println(myMat)
 	for i := 0; i < len(myMat); i++ {
 		for j := 0; j < len(myMat[i]); j++ {
