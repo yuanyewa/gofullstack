@@ -68,5 +68,20 @@ func nationCapitalsExample() {
 func main() {
 
 	nationCapitalsExample()
+	mymap := map[int]string{100: "abc", 20: "cde"}
+	fmt.Println(mymap)
+	var keys []int
+	for k, v := range mymap {
+		fmt.Println(k, v)
+		keys = append(keys, k)
+	}
+	fmt.Println(keys)
+	sort.Ints(keys)
+	x := []int{1, 2, 4, 3}
+	sort.Ints(x)
+	fmt.Println(keys)
+	for _, k := range keys {
+		fmt.Println(k, mymap[k])
+	}
 
 }
