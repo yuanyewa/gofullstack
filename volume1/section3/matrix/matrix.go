@@ -6,6 +6,14 @@ import (
 )
 
 func main() {
+	myMat := [3][]int{{1, 2}, {3, 4, 5}}
+	fmt.Println(myMat)
+	for i := 0; i < len(myMat); i++ {
+		for j := 0; j < len(myMat[i]); j++ {
+			fmt.Printf("%5d", myMat[i][j])
+		}
+		fmt.Printf("\n")
+	}
 
 	// Here we create a multi-dimensional array, a 3x4 matrix (3 rows, 4 columns)
 	myMatrix := [3][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}
