@@ -17,5 +17,9 @@ func main() {
 	fmt.Println(<-messageQueue)
 	fmt.Println(<-messageQueue)
 	fmt.Println(<-messageQueue)
-
+	val := make(chan int) //yuanye: why buffered channel can be written directly; unbuffered must be "go"-ed
+	//https://groups.google.com/forum/#!topic/golang-nuts/n1jKyGu6krk
+	// for un-buffered channel, when you are writing to it, someone must be listening to it
+	go func() { val <- 10 }()
+	fmt.Println(<-val)
 }
